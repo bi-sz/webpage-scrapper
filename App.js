@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Header } from './src/components/Header/Header';
+import { HeaderWithoutCompound } from './src/components/HeaderWithoutCompound';
+import { HeaderGroup } from './src/components/Header/HeaderGroup';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <View style={{flex:1, }}>
+        {/* <HeaderWithoutCompound title ='HEDER' /> */}
+        <Header>
+          <HeaderGroup>
+            <Header.Icon iconName='arrow-back'></Header.Icon>
+            <Header.Title title='HEADER'></Header.Title>
+          </HeaderGroup>
+
+          <Header.Icon iconName='close'></Header.Icon>
+        </Header>
+      </View>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
