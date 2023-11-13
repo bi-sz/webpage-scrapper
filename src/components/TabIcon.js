@@ -36,7 +36,7 @@ export const TabIcon = (props)=>{
         return (
             <Badge fontSize={10}>
                 <Icon 
-                    name={this.props.iconName} 
+                    name={props.iconName} 
                     size={20} 
                     color={'black'}/>
             </Badge>
@@ -45,7 +45,7 @@ export const TabIcon = (props)=>{
 
     return (
         <Icon 
-        name={this.props.iconName} 
+        name={props.iconName} 
         size={20} 
         color={'black'}/>
     )
