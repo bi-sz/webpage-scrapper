@@ -16,14 +16,14 @@ import PropTypes from 'prop-types';
 //     }
 // } 
 
-export const Typography = (props) => {
+export const Typography = (props)=>{
     return (
         <RNText 
-            style = {{
-                color:props.color, 
-                fontSize:props.fontSize
+            style={{
+                color: props.color, 
+                fontSize: props.fontSize
             }}>
-                {props.children}
+            {props.children}
         </RNText>
     )
 }
